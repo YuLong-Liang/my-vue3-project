@@ -38,7 +38,7 @@ src/
 ├── components/       # 复用组件
 ├── composables/      # 组合式函数，命名需以 `use` 开头
 ├── layouts/          # 布局组件（如默认布局、空布局等）
-├── pages/            # 页面视图，自动生成路由
+├── views/            # 页面视图，自动生成路由
 ├── plugins/          # 插件及第三方库封装
 ├── router/           # 路由配置（vue-router）
 ├── services/         # 接口请求封装（使用 axios）

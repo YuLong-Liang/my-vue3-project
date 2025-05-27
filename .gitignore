@@ -1,24 +1,60 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+my-vue3-project/node_modules
 
-node_modules
-dist
-dist-ssr
+.DS_Store
+my-vue3-project/dist
+my-vue3-project/dist-ssr
 *.local
+my-vue3-project/.history
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+my-vue3-project/.idea
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
-*.sw?
+*.local
+
+my-vue3-project/stats.html
+my-vue3-project/pnpm-lock.yaml
+my-vue3-project/package-lock.json
+my-vue3-project/.stylelintcache
+my-vue3-project/.eslintcache
+
+vue3-element-admin/node_modules
+vue3-element-admin/.DS_Store
+vue3-element-admin/dist
+vue3-element-admin/dist-ssr
+*.local
+vue3-element-admin/.history
+
+# Editor directories and files
+vue3-element-admin/.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.local
+
+vue3-element-admin/stats.html
+vue3-element-admin/pnpm-lock.yaml
+vue3-element-admin/package-lock.json
+vue3-element-admin/.stylelintcache
+vue3-element-admin/.eslintcache
+
+# Created by .ignore support plugin (hsz.mobi)
+### Example sysUserDetails template template
+### Example sysUserDetails template
+
+# IntelliJ project files
+youlai-boot/.idea
+*.iml
+youlai-boot/out
+youlai-boot/gen
+youlai-boot/target
+*.log
+youlai-boot/logs
+.history
+
+youlai-boot/docker/*/data/
+youlai-boot/docker/minio/config
+youlai-boot/docker/xxljob/logs
