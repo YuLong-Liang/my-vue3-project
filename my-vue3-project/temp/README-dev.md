@@ -1,6 +1,17 @@
 
 # Vue 3 项目规范
 
+## 启动命令
+
+mcp 启动：
+
+npx @agentdeskai/browser-tools-server
+npx @agentdeskai/browser-tools-mcp
+
+cursor 里面配置
+cmd /c npx -y @agentdeskai/browser-tools-mcp@1.2.0
+
+
 ## 项目概述
 本项目基于 Vue 3、Vue Router 4 和 Pinia 构建，适用于中大型管理类项目。项目使用 Vite 3 作为构建工具，支持现代前端开发流程，具备快速启动和热更新能力。
 

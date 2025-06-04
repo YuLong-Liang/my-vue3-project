@@ -1,21 +1,21 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
-import ElementPlus from 'element-plus'
-import 'element-plus/dist/index.css'
-import * as ElementPlusIconsVue from '@element-plus/icons-vue'
-import App from './App.vue'
-import router from './router'
-import './styles/main.scss'
+import { createApp } from "vue";
+import App from "./App.vue";
+import setupPlugins from "@/plugins";
 
-const app = createApp(App)
+// 暗黑主题样式
+import "element-plus/theme-chalk/dark/css-vars.css";
+// 暗黑模式自定义变量
+import "@/styles/dark/css-vars.css";
+import "@/styles/index.scss";
+import "uno.css";
 
-// 注册所有图标
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
-  app.component(key, component)
-}
+// 过渡动画
+import "animate.css";
 
-app.use(createPinia())
-app.use(router)
-app.use(ElementPlus)
+// 自动为某些默认事件（如 touchstart、wheel 等）添加 { passive: true },提升滚动性能并消除控制台的非被动事件监听警告
+import "default-passive-events";
 
-app.mount('#app')
+const app = createApp(App);
+// 注册插件
+app.use(setupPlugins);
+app.mount("#app");

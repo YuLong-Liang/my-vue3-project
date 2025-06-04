@@ -37,12 +37,12 @@ src/
 ├── assets/           # 静态资源，如图片、字体、样式等
 ├── components/       # 复用组件
 ├── composables/      # 组合式函数，命名需以 `use` 开头
-├── layouts/          # 布局组件（如默认布局、空布局等）
+├── layout/          # 布局组件（如默认布局、空布局等）
 ├── views/            # 页面视图，自动生成路由
 ├── plugins/          # 插件及第三方库封装
 ├── router/           # 路由配置（vue-router）
 ├── services/         # 接口请求封装（使用 axios）
-├── stores/           # 状态管理（Pinia）
+├── store/           # 状态管理（Pinia）
 ├── styles/           # 全局样式（SCSS、CSS）
 └── utils/            # 工具函数
 ```
