@@ -1,9 +1,9 @@
 <template>
   <div class="select-study-module">
     <!-- 页面标题 -->
-    <header class="header">
+    <!-- <header class="header">
       <h1>单词易记智能英语</h1>
-    </header>
+    </header> -->
     <!-- 顶部 Tabs -->
     <nav class="tabs">
       <button
@@ -180,32 +180,32 @@ onMounted(() => {
 .select-study-module {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 600px;
   background: #f6f8fa;
 }
 .header {
   text-align: center;
-  padding: 24px 0 12px 0;
-  font-size: 24px;
+  padding: 16px 0 8px 0;
+  font-size: 20px;
   font-weight: bold;
   color: #409eff;
   background: #fff;
-  box-shadow: 0 2px 8px #f0f1f2;
+  box-shadow: 0 1px 4px #f0f1f2;
 }
 .tabs {
   display: flex;
   justify-content: center;
   background: #fff;
   border-bottom: 1px solid #e0e7ef;
-  padding: 8px 0;
+  padding: 4px 0;
 }
 .tab {
-  margin: 0 16px;
-  padding: 8px 24px;
-  border-radius: 20px;
+  margin: 0 12px;
+  padding: 6px 16px;
+  border-radius: 16px;
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 14px;
   color: #333;
   cursor: pointer;
   transition:
@@ -222,19 +222,19 @@ onMounted(() => {
   overflow: hidden;
 }
 .serie-list {
-  width: 180px;
+  width: 160px;
   background: #fff;
   border-right: 1px solid #e0e7ef;
   overflow-y: auto;
-  padding: 16px 0;
+  padding: 12px 0;
 }
 .serie-item {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 8px 16px;
   cursor: pointer;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  border-radius: 6px;
+  margin-bottom: 4px;
   transition: background 0.2s;
 }
 .serie-item.selected {
@@ -243,35 +243,34 @@ onMounted(() => {
 }
 .icon-a {
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: #409eff;
   color: #fff;
   border-radius: 50%;
   text-align: center;
-  line-height: 24px;
-  font-weight: bold;
-  margin-right: 10px;
-  font-size: 16px;
+  line-height: 20px;
+  font-size: 14px;
+  margin-right: 8px;
 }
 .version-name {
-  font-size: 15px;
+  font-size: 14px;
 }
 .program-cards {
   flex: 1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  padding: 16px;
   overflow-y: auto;
   background: #f6f8fa;
 }
 .program-card {
-  width: 220px;
+  width: 100%;
   background: #e3f0fe;
-  border-radius: 16px;
-  box-shadow: 0 2px 8px #e0e7ef;
-  padding: 20px 0 16px 0;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px #e0e7ef;
+  padding: 16px 0 12px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -281,21 +280,36 @@ onMounted(() => {
     transform 0.2s;
 }
 .program-card:hover {
-  box-shadow: 0 4px 16px #b3d8fd;
-  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 2px 8px #b3d8fd;
+  transform: translateY(-1px) scale(1.02);
 }
 .program-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   color: #409eff;
 }
 .progress-ring {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
+}
+.progress-ring svg {
+  width: 50px;
+  height: 50px;
+}
+.progress-ring circle {
+  cx: 25;
+  cy: 25;
+  r: 22;
+  stroke-width: 4;
+}
+.progress-ring text {
+  x: 25;
+  y: 30;
+  font-size: 14px;
 }
 .program-words {
-  font-size: 15px;
+  font-size: 13px;
   color: #666;
-  margin-top: 4px;
+  margin-top: 2px;
 }
 </style>

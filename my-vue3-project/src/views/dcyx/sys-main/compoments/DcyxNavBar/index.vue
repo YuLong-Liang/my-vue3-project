@@ -20,7 +20,12 @@
     <el-dialog
       v-model="dialogVisible"
       title="选择学习模块"
-      width="100%"
+      width="80%"
+      :fullscreen="false"
+      :show-close="true"
+      :close-on-click-modal="false"
+      :close-on-press-escape="true"
+      class="study-module-dialog"
       @close="dialogVisible = false"
     >
       <dcyx-select-study-module />
@@ -35,7 +40,7 @@ defineOptions({
 })
 
 import { ref, defineEmits } from 'vue'
-import DcyxSelectStudyModule from '@/components/DcyxSelectStudyModule/index.vue'
+import DcyxSelectStudyModule from '@/views/dcyx/sys-main/compoments/DcyxSelectStudyModule/index.vue'
 import { useDcyxSeriesStore } from '@/store'
 import type { TabItem } from '@/api/dcyx_series.api'
 const dcyxSeriesStore = useDcyxSeriesStore()
@@ -93,13 +98,13 @@ onMounted(() => {
 <style scoped lang="scss">
 .dcyx-navbar {
   width: 100%;
-  height: 100px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
   color: #fff;
-  padding: 0 40px;
+  padding: 0 24px;
   box-sizing: border-box;
   position: relative;
   z-index: 10;
@@ -108,24 +113,24 @@ onMounted(() => {
   display: flex;
   align-items: center;
   .logo {
-    width: 48px;
-    height: 48px;
-    margin-right: 12px;
+    width: 36px;
+    height: 36px;
+    margin-right: 8px;
   }
   .logo-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
   }
 }
 .navbar-center {
   display: flex;
-  gap: 32px;
+  gap: 20px;
   .nav-item {
-    font-size: 1.2rem;
+    font-size: 1rem;
     cursor: pointer;
-    padding: 8px 18px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
     transition: background 0.2s;
     &.active {
       background: rgba(255, 255, 255, 0.18);
@@ -138,14 +143,31 @@ onMounted(() => {
 }
 .navbar-right {
   .logout {
-    font-size: 1.1rem;
+    font-size: 0.95rem;
     cursor: pointer;
-    padding: 8px 18px;
-    border-radius: 8px;
+    padding: 6px 14px;
+    border-radius: 6px;
     transition: background 0.2s;
     &:hover {
       background: rgba(255, 255, 255, 0.18);
     }
+  }
+}
+
+:deep(.study-module-dialog) {
+  .el-dialog__header {
+    margin: 0;
+    padding: 12px 20px;
+    border-bottom: 1px solid #e0e7ef;
+  }
+
+  .el-dialog__body {
+    padding: 0;
+  }
+
+  .el-dialog__title {
+    font-size: 16px;
+    font-weight: 600;
   }
 }
 </style>

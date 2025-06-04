@@ -113,63 +113,62 @@ onMounted(() => {
   // background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
 }
 .right-card {
-  width: 98%;
-  min-height: 90vh;
-  margin: 2vh 1%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   color: #333;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 32px 24px 24px 24px;
+  padding: 20px 16px;
+  gap: 16px;
 }
 .progress-section {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.8);
-  border-radius: 12px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 .course-title {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: bold;
   color: #1976d2;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .task-section {
-  margin-top: 10px;
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 18px 16px;
-  margin-top: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 .task-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: #f57c00;
-  margin-top: 10px;
+  margin-top: 4px;
 }
 .vocab-section {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 18px 16px;
-  margin-top: 24px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 .vocab-title {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
   color: #43e97b;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .vocab-info {
-  font-size: 15px;
+  font-size: 13px;
   color: #2d3a4b;
   div {
-    margin-bottom: 6px;
+    margin-bottom: 4px;
     span {
       font-weight: bold;
       color: #1976d2;
@@ -177,7 +176,7 @@ onMounted(() => {
   }
 }
 .progress-section .el-progress--line {
-  margin-bottom: 15px;
-  max-width: 600px;
+  margin-bottom: 12px;
+  max-width: 100%;
 }
 </style>

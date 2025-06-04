@@ -189,3 +189,12 @@
 左侧版本列表和右侧模块卡片区域均支持滚动，保证内容超出时可以查看全部内容。
 
 #### todo7
+1、项目存在问题：布局卡片太大了；
+2、我想让页面看起来更美观，看起来更加紧凑型；
+3、修改项目样式；
+
+#### todo08
+1、项目是有样式模块的，sass 管理的在  src\styles 目录下；
+  该目录下有 element-plus.scss 、  variables.scss 、index.scss，我想你应该理解它们；
+2、组件 src\views\dcyx\sys-main 下面的 VUE 组件，需要将这个目录下组件的样式，公共的部分样式，提取到 src\styles 目录下；
+3、需求：src\views\dcyx\sys-main\index.vue 这个文件使用了 ElMessageBox 功能，但是它实现的样式比较丑，请调整为合适、美观的的样式；

@@ -86,76 +86,78 @@ function onProfile() {
   // background: linear-gradient(135deg, #e0eafc 0%, #cfdef3 100%);
 }
 .left-card {
-  width: 96%;
-  min-height: 90vh;
-  margin: 2vh 2%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
   color: #333;
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 32px 24px 24px 24px;
+  padding: 20px 16px;
+  gap: 16px;
 }
 .user-info {
   display: flex;
   align-items: center;
-  margin-bottom: 18px;
+  margin-bottom: 12px;
 }
 .avatar-area {
-  margin-right: 18px;
+  margin-right: 12px;
 }
 .user-meta {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 2px;
 }
 .user-name {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #2d3a4b;
 }
 .user-id,
 .user-expiry {
-  font-size: 14px;
+  font-size: 12px;
   color: #5c6b7a;
 }
 .smart-review-btn {
   width: 100%;
-  margin-bottom: 18px;
-  font-size: 16px;
+  margin-bottom: 12px;
+  font-size: 14px;
   font-weight: 500;
   background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
   border: none;
+  padding: 8px 16px;
 }
 .action-btns {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
-  gap: 12px;
+  margin-bottom: 16px;
+  gap: 8px;
 }
 .action-btns .el-button {
   flex: 1;
-  font-size: 15px;
+  font-size: 13px;
+  padding: 6px 12px;
 }
 .today-report {
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
-  padding: 18px 16px;
+  border-radius: 8px;
+  padding: 12px;
   margin-top: auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
 }
 .report-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   color: #f57c00;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .report-item {
-  font-size: 15px;
+  font-size: 13px;
   color: #2d3a4b;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   span {
     font-weight: bold;
     color: #1976d2;
