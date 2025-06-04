@@ -6,6 +6,7 @@ import {
 } from 'vue-router'
 
 export const Layout = () => import('@/layout/index.vue')
+export const DcyxLayout = () => import('@/layout-dcyx/index.vue')
 
 // 静态路由
 export const constantRoutes: RouteRecordRaw[] = [
@@ -68,6 +69,59 @@ export const constantRoutes: RouteRecordRaw[] = [
         component: () =>
           import('@/views/system/notice/components/MyNotice.vue'),
         meta: { title: '我的通知', icon: 'user', hidden: true },
+      },
+    ],
+  },
+
+  {
+    path: '/work',
+    component: DcyxLayout,
+    redirect: '/work/word-training',
+    children: [
+      {
+        path: 'word-training',
+        name: 'WordTraining',
+        component: () => import('@/views/dcyx/work-main/word-training.vue'),
+        meta: {
+          title: '单词训练',
+          keepAlive: true,
+        },
+      },
+      {
+        path: 'memory-tracking',
+        name: 'MemoryTracking',
+        component: () => import('@/views/dcyx/work-main/memory-tracking.vue'),
+        meta: {
+          title: '记忆追踪',
+          keepAlive: true,
+        },
+      },
+      {
+        path: 'test-center',
+        name: 'TestCenter',
+        component: () => import('@/views/dcyx/work-main/test-center.vue'),
+        meta: {
+          title: '测试中心',
+          keepAlive: true,
+        },
+      },
+      {
+        path: 'word-book',
+        name: 'WordBook',
+        component: () => import('@/views/dcyx/work-main/word-book.vue'),
+        meta: {
+          title: '单词本',
+          keepAlive: true,
+        },
+      },
+      {
+        path: 'my-profile',
+        name: 'MyProfile',
+        component: () => import('@/views/dcyx/work-main/my-profile.vue'),
+        meta: {
+          title: '我的',
+          keepAlive: true,
+        },
       },
     ],
   },

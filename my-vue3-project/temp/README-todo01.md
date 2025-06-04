@@ -198,3 +198,24 @@
   该目录下有 element-plus.scss 、  variables.scss 、index.scss，我想你应该理解它们；
 2、组件 src\views\dcyx\sys-main 下面的 VUE 组件，需要将这个目录下组件的样式，公共的部分样式，提取到 src\styles 目录下；
 3、需求：src\views\dcyx\sys-main\index.vue 这个文件使用了 ElMessageBox 功能，但是它实现的样式比较丑，请调整为合适、美观的的样式；
+
+#### todo09
+1、新增一个布局VUE 组件和若干详情页面 VUE；
+2、布局页面要求：
+  1、底部导航栏，位于页面底部，水平等距分布五个按钮，点击按钮时，需要跳转到对应下面5个对应路由，分别对应每个详情页面：
+  2、布局vue 存储在 src\layout-dcyx\index.vue （已完成）
+  3、底部栏封装为 VUE 文件，存储在 src\layout-dcyx\components\NavBar\index.vue （已完成）
+  4、布局 VUE 内部，嵌套子页面包含对应的详情页；
+3、详情页面为，这些详情页都封装为独立的 VUE 文件，都存储在 src\views\dcyx\work-main\ 目录下：
+  1、单词训练页面；src\views\dcyx\work-main\word-training.vue (已完成)
+  2、记忆追踪页面；src\views\dcyx\work-main\memory-tracking.vue （已完成）
+  3、测试中心页面；（已完成）
+  4、单词本页面； （已完成）
+  5、我的页面； （已完成）
+4、详情页先简单实现，请你自由发挥；
+
+#### todo10
+1、基于 todo09 实现的布局和页面组件；
+2、请添加对应的路由，
+  1、src\layout-dcyx\components\NavBar\index.vue 在这里你定义了不同的 path；
+  2、src\router\index.ts 在这里你需要增加对应的详情页面的路由；需要实现 src\layout-dcyx\index.vue 布局VUE文件嵌套一个孩子，子详情页面 VUE， 它们在 src\views\dcyx\work-main 存储；

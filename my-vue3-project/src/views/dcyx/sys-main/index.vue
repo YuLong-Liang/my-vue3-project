@@ -29,6 +29,7 @@
           :memory-duration="todayReport?.time1 || '00:00'"
           :vocab-count="currentProgram?.programWordNumber || 0"
           :speed="todayReport?.seconds || 0"
+          @enter-program="onEnterProgram"
         />
       </div>
     </div>
@@ -106,15 +107,22 @@ function onNavSelect(_key: string) {}
 function onSemesterChange(_value: string) {}
 function onSmartReview() {
   ElMessage.success('点击了智能复习')
+  router.push('/work/word-training')
 }
 function onDailyTask() {
   ElMessage.info('点击了每日任务')
 }
 function onTestCenter() {
   ElMessage.info('点击了测试中心')
+  router.push('/work/test-center')
 }
 function onProfile() {
   ElMessage.info('点击了我的')
+  router.push('/work/my-profile')
+}
+function onEnterProgram() {
+  ElMessage.info('点击了进入课程')
+  router.push('/work/word-training')
 }
 
 const initDashboard = () => {
@@ -135,7 +143,7 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
-@import '@/styles/dashboard.scss';
+@use '@/styles/dashboard.scss' as dashboard;
 
 // Component-specific styles only
 :deep(.el-card) {

@@ -4,7 +4,7 @@
       <!-- 在学课程 -->
       <div class="course-title">在学课程</div>
       <!-- 学习进度区域 -->
-      <div class="progress-section">
+      <div class="progress-section" @click="onEnterProgram">
         <div class="course-title">{{ courseName }}</div>
         <el-progress
           :text-inside="true"
@@ -48,7 +48,11 @@ defineOptions({
   inheritAttrs: false,
 })
 
-import { useDcyxProgramStore } from '@/store/modules/dcyx_program.store'
+const emits = defineEmits<{
+  (_e: 'enter-program'): void
+}>()
+
+import { useDcyxProgramStore } from '@/store'
 
 const dcyxProgramStore = useDcyxProgramStore()
 
@@ -93,6 +97,10 @@ function initTodayVocabInfo() {
       (parseInt(memoryDuration.value.split(':')[0]) +
         parseInt(memoryDuration.value.split(':')[1]) / 60),
   )
+}
+
+function onEnterProgram() {
+  emits('enter-program')
 }
 
 onMounted(() => {
