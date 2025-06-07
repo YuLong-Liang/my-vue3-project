@@ -34,15 +34,16 @@
 </template>
 
 <script setup lang="ts">
+import { ref, defineEmits } from 'vue'
+import DcyxSelectStudyModule from '@/views/dcyx/sys-main/compoments/DcyxSelectStudyModule/index.vue'
+import { useDcyxSeriesStore } from '@/store'
+import type { TabItem } from '@/api/dcyx_series.api'
+
 defineOptions({
   name: 'DcyxNavBar',
   inheritAttrs: false,
 })
 
-import { ref, defineEmits } from 'vue'
-import DcyxSelectStudyModule from '@/views/dcyx/sys-main/compoments/DcyxSelectStudyModule/index.vue'
-import { useDcyxSeriesStore } from '@/store'
-import type { TabItem } from '@/api/dcyx_series.api'
 const dcyxSeriesStore = useDcyxSeriesStore()
 
 interface NavItem {

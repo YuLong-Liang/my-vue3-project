@@ -42,17 +42,18 @@ defineOptions({
   inheritAttrs: false,
 })
 
-import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { ElMessage, ElMessageBox } from 'element-plus'
 import DcyxNavBar from './compoments/DcyxNavBar/index.vue'
 import DcyxSysLeftBoard from './compoments/DcyxSysLeftBoard/index.vue'
 import DcyxSysRightBoard from './compoments/DcyxSysRightBoard/index.vue'
-import { useDcyxSeriesStore } from '@/store'
-import { useDcyxUserStore } from '@/store'
-import { useDcyxStudyStore } from '@/store'
-import { useDcyxProgramStore } from '@/store'
-import { useUserStore } from '@/store'
+import {
+  useDcyxSeriesStore,
+  useDcyxUserStore,
+  useDcyxStudyStore,
+  useDcyxProgramStore,
+  useUserStore,
+} from '@/store'
 
 const router = useRouter()
 const userStore = useUserStore()
@@ -167,9 +168,11 @@ h6 {
 }
 
 // Content text styles
-.dashboard-main,
-.dashboard-content {
-  @extend .dashboard-text;
+.dashboard-main {
+  height: 100%;
+  .dashboard-content {
+    @extend .dashboard-text;
+  }
 }
 
 // Highlight styles

@@ -313,15 +313,15 @@ export default defineMock([
     },
   },
   {
-    url: 'program/unit/getUnitsInfoByProgram/:parentid/:programid/:unitid',
+    url: 'program/unit/getUnitsInfoByProgram/:parentid/:seriesid/:programid',
     method: ['GET'],
     body: ({ params }) => {
       const parentid = params.parentid
+      const seriesid = params.seriesid
       const programid = params.programid
-      const unitid = params.unitid
       console.log('parentid:', parentid)
+      console.log('seriesid:', seriesid)
       console.log('programid:', programid)
-      console.log('unitid:', unitid)
       return {
         code: '00000',
         msg: '一切ok',

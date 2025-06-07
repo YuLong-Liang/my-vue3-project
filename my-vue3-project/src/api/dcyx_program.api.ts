@@ -10,8 +10,51 @@ const DCYX_PROGRAM_API = {
       method: 'get',
     })
   },
+  // getUnitsInfoByProgram
+  getUnitsInfoByProgram: (
+    parentId: string,
+    seriesId: string,
+    programId: string,
+  ) => {
+    return request<any, UnitItem[]>({
+      url: `${PROGRAM_BASE_URL}/unit/getUnitsInfoByProgram/${parentId}/${seriesId}/${programId}`,
+      method: 'get',
+    })
+  },
+  // countWordsByUnit
+  countWordsByUnit: (seriesId: string, programId: string, unitName: string) => {
+    return request<any, UnitCountWordItem>({
+      url: `${PROGRAM_BASE_URL}/word/countWordsByUnit/${seriesId}/${programId}/${unitName}`,
+      method: 'get',
+    })
+  },
 }
+
 export default DCYX_PROGRAM_API
+
+export interface UnitCountWordItem {
+  unitTotal: string
+  studyNumForZnjy: number
+  studyNumForZnmx: number
+  studyNumForZntx: number
+  testTimeForZnjy: string
+  testTimeForZnmx: string
+  testTimeForZntx: string
+  restudyNumForZnjy: number
+  restudyNumForZnmx: number
+  restudyNumForZntx: number
+  isEndZnjy: string
+  isEndZntx: string
+  isEndZnmx: string
+}
+
+export interface UnitItem {
+  id: string
+  name: string
+  score: number | null
+  time: number | null
+  isEnd: string
+}
 
 export interface CurrentProgram {
   seriesId: string

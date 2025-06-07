@@ -125,6 +125,37 @@ export const constantRoutes: RouteRecordRaw[] = [
       },
     ],
   },
+
+  {
+    path: '/dcyx',
+    redirect: '/dcyx/inteli-memory',
+    children: [
+      {
+        path: 'inteli-memory',
+        name: 'InteliMemory',
+        component: () => import('@/views/dcyx/learn-main/inteli-memory.vue'),
+        meta: {
+          title: '智能记忆',
+        },
+      },
+      {
+        path: 'inteli-dictation',
+        name: 'InteliDictation',
+        component: () => import('@/views/dcyx/learn-main/inteli-dictation.vue'),
+        meta: {
+          title: '智能听写',
+        },
+      },
+      {
+        path: 'inteli-writing',
+        name: 'InteliWriting',
+        component: () => import('@/views/dcyx/learn-main/inteli-writing.vue'),
+        meta: {
+          title: '智能默写',
+        },
+      },
+    ],
+  },
 ]
 
 /**

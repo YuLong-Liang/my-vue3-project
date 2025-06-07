@@ -1,5 +1,4 @@
 import request from '@/utils/request'
-import { ProgramItem } from './dcyx_program.api'
 
 const STUDY_BASE_URL = '/api/v1/study'
 
